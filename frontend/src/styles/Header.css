@@ -1,0 +1,223 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background-color: rgba(15, 23, 42, 0.95); /* Using --dark-bg with opacity */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-light); /* Using --primary-light */
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 70%;
+  background: var(--gradient-primary); /* Using the gradient */
+  border-radius: 3px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  color: var(--text-gray);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition-base);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav a:hover {
+  color: var(--primary-light);
+  background-color: rgba(139, 92, 246, 0.1); /* --primary-light with opacity */
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-light);
+  transition: var(--transition-base);
+  transform: translateX(-50%);
+}
+
+.nav a:hover::after {
+  width: 80%;
+}
+
+.nav a svg {
+  font-size: 1rem;
+}
+
+/* Active link style */
+.nav a.active {
+  color: var(--primary-light);
+  font-weight: 600;
+  background-color: rgba(139, 92, 246, 0.2);
+}
+
+.nav a.active::after {
+  width: 80%;
+}
+
+/* Header controls container */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--light-bg);
+  color: var(--text-light);
+  transition: var(--transition-base);
+  font-size: 18px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Mobile menu styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary-light);
+  border-radius: 10px;
+  transition: var(--transition-base);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--dark-bg);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-base);
+    padding: 6rem 2rem 2rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav a {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .header-controls {
+    gap: 0.75rem;
+  }
+  
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  /* Mobile menu button animation when active */
+  .menu-toggle.active div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+/* Animation for theme change */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.theme-toggle.changed {
+  animation: pulse 0.5s ease;
+}

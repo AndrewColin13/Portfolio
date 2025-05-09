@@ -1,0 +1,143 @@
+/* src/styles/Home.css */
+.home-section {
+    min-height: 100vh;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .home-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .hero-content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .hero-greeting {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+  
+  .hero-description {
+    color: var(--text-gray);
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .button-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-primary:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .button-outline {
+    background-color: transparent;
+    border: 1px solid var(--text-white);
+    color: var(--text-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button-outline:hover {
+    background-color: var(--text-white);
+    color: var(--darker-bg);
+  }
+  
+  .skills-section {
+    margin-top: 6rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    background-color: var(--light-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--text-white);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+    .hero-content {
+      text-align: left;
+    }
+    
+    .hero-description {
+      margin: 0 0 2rem 0;
+    }
+    
+    .hero-buttons {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.75rem;
+    }
+    
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
