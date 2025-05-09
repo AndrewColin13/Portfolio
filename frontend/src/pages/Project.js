@@ -39,7 +39,7 @@ const Projects = () => {
         { name: "GSAP", icon: null }
       ],
       github: "https://github.com/AndrewColin13/My-Portfolio",
-      live: "https://github.com/AndrewColin13/Portfolio"
+      live: "https://my-website-portfolio-5a4b8.web.app"
     },
     {
         id: 3,
