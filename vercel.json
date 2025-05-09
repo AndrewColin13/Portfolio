@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     { "src": "frontend/package.json", "use": "@vercel/static-build" },
-    { "src": "frontend/api/contact.js", "use": "@vercel/node" }
+    { "src": "functions/api/contact.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/contact", "dest": "/frontend/api/contact.js" },
+    { "src": "/api/contact", "dest": "/functions/api/contact.js" },
     { "src": "/(.*)", "dest": "/frontend/build/$1" }
   ]
 }
