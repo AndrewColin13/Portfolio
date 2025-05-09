@@ -3,7 +3,8 @@
 .footer {
   background-color: rgba(15, 23, 42, 0.95); /* Matches header background */
   backdrop-filter: blur(8px);
-  border-top: 1px solid var(--glass-border);
+  border-top: 2px solid; /* Define border width and style */
+  border-image: linear-gradient(90deg, #9D4EDD 0%, #C53A94 100%) 1;
   color: var(--text-white);
   padding: 2rem 0;
   margin-top: 4rem;

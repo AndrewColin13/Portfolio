@@ -20,7 +20,7 @@
   }
   
   .hero-greeting {
-    color: var(--primary-color);
+    color: var(--text-white);
     font-weight: 500;
     margin-bottom: 0.5rem;
   }

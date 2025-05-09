@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="logo">Web & Mobile Developer crafting modern digital experiences.</div>
+            <div className="logo">Web & Mobile Developer</div>
             <button 
                 className={`menu-toggle ${menuOpen ? 'active' : ''}`} 
                 onClick={toggleMenu}

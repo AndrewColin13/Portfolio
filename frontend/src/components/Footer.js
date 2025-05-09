@@ -4,10 +4,10 @@ import '../styles/Footer.css';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <FaGithub size={20} />, url: 'https://github.com/AndrewColin13' },
-    { icon: <FaLinkedin size={20} />, url: 'https://www.linkedin.com/in/andrew-colin-de-leon-5abb62287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-    { icon: <FaTwitter size={20} />, url: 'https://twitter.com/ColinDeLeon13' },
-    { icon: <FaEnvelope size={20} />, url: 'mailto:andrewcolindeleon13@gmail.com' }
+    { icon: <FaGithub size={25} />, url: 'https://github.com/AndrewColin13' },
+    { icon: <FaLinkedin size={25} />, url: 'https://www.linkedin.com/in/andrew-colin-de-leon-5abb62287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+    { icon: <FaTwitter size={25} />, url: 'https://twitter.com/ColinDeLeon13' },
+    { icon: <FaEnvelope size={25} />, url: 'mailto:andrewcolindeleon13@gmail.com' }
   ];
 
   const footerVariants = {
